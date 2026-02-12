@@ -2,22 +2,23 @@ html{
     scroll-behavior: smooth;
     scroll-padding-top: 200px;
     box-sizing: border-box;
+    overflow-x: hidden;
+    user-select: none;
 }
 body{
     margin: 0;
     padding: 0;
-    background-image: url(../images/code2.jpg);
+    background-image: url(../images/port4.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
 .partone{
-  background-image: url(../images/port4.webp);
-  background-repeat: no-repeat;  
+  background-color: #0e0b0c96;
+  z-index: 2;
+  position: absolute;
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
 }
 nav{
     position: fixed;
@@ -25,37 +26,45 @@ nav{
     width: 100%;
    background-color: rgb(3, 3, 46);
    z-index: 1000;
-   padding: 8px;
+   padding: 0.5vw;
+   font-family: sans-serif;
     }
 nav ul{
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    height: 1vw;
     display: flex;
-    gap: 20px;
+    gap: 2vw;
     align-items: center;
     }
 nav ul, li,a{
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 1.25rem;
 }
 nav ul li a:hover{
     color:  #7cf03d;;
 
 }
-nav ul .logo{
-    margin-right: 500px;
-    background: linear-gradient(90deg,#ff7e5f,#00ff00);
+nav ul .logo a{
+    margin-right: 25vw;
+    background: linear-gradient(135deg,#ff7e5f,#00ff00, #fdfcfc);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 32px;
+    font-size: 1.7rem;
     font-weight: 700;
 }
-nav ul li{
-    margin-left: 10px;
+.logo .sym{
+    border: 0.2vw solid #fcfcfd;
+    padding: 0.4vw 1vw;
+    border-radius: 50%;
+    font-size: 2rem;
+    margin-right: 1vw;
+    margin-left: 4vw;
+    color: white;
+    background: linear-gradient(135deg,#ff7e5f,#00ff00);
 }
+
 .socials{
     display: flex;
     align-items: center;
@@ -75,7 +84,7 @@ nav ul li{
 }
 .button:hover{
     background: transparent;
-    color: aqua;
+    color: #fcfdfd;
     box-shadow: none;
 }
 .sci{
@@ -119,10 +128,10 @@ nav ul li{
     margin-left: 5px;
     margin-right: 5px;
 }
-img{
+.intro-pic{
     top: 30px;
-    width: 22vw;
-    height: 52vh;
+    width: 19.5vw;
+    height: 23vw;
     border-radius: 50%;
     background: linear-gradient(90deg, #ff00ff,#00ffff,#ff9900);
     padding: 10px;
@@ -248,15 +257,24 @@ h4{
     margin-bottom: 100px;
     margin-left: 100px;
     margin-right: 10px;
-    font-size: 16px;
+}
+#tell{
+    text-shadow: 2px 2px 5px white;
+}
+.more-aboutme{
+    font-size: 1.14rem;
     color: white;
     text-align: justify;
     height: 150px;
-    width: 450px;
+    line-height: 1.4;
+    width: 38vw;
 }
 .offer{
     display: flex;
-    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5vw;
+    line-height: 1.5;
     margin-top: 50px;
     margin-bottom: 200px;
     margin-left: 60px;
@@ -264,18 +282,29 @@ h4{
 }
 .help{
     text-align: justify;
-    height: 292px;
-    width: 400px;
+    height: 20vw;
+    width: 30vw;
     border: 6px solid rgba(17, 17, 102, 0.712);
-    border-radius: 30px;
+    border-top-right-radius: 12vw;
+    border-bottom-left-radius: 12vw;
     font-weight: 300;
     padding: 15px;
-    color: #f0f3f3;
-    background-color: #06fc0662;
+   background: linear-gradient(135deg,#00ff00,#170e66);
+}
+.help h4{
+    margin-top: -2vw;
+    text-align: center;
+}
+.what-do{
+     color: #f0f3f3;
+     width: 25vw;
+     padding-left: 3.5vw;
+     margin-top: -1.3vw;
+     font-size: 1.05rem;
 }
 .icon{
   display: inline-block;
-  font-size: 3rem;
+  font-size: 2.6rem;
   text-shadow: 0 0 10px #fff,
                0 0 20px #ff00ff,
                0 0 40px #00ffff,
@@ -337,45 +366,81 @@ h4{
 }
 .contact{
     display: flex;
-    gap: 100px;
-    margin-left: 200px;
+    gap: 5vw;
+    justify-content: center;
+    margin-left: -5vw;
     margin-top: 50px;
     margin-bottom: 200px;
 
 }
+.map{
+    width: 35vw;
+    margin-top: 3vw;
+    border-radius: 1vw;
+}
 .call{
-    text-align: justify;
-    height: 280px;
-    width: 480px;
-    border: 2px solid #290e8a96;
-    padding: 5px;
-    border-top-left-radius: 49px;
-    border-bottom-left-radius: 90px;
-    border-bottom-right-radius: 250px;
-    background-color: #00ff0023;
-    box-shadow: 0 0 20px rgb(17, 17, 77);
+    display: flex;
+    justify-content: center;
+     font-size: 1.2rem;
+     color: white;
+     gap: 5vw;
+     margin-top: 5vw;
+}
+.call .locate{
+   border: 0.2vw solid white;
+   padding:  1.8vw 3vw;
+   border-radius: 2vw;
+}
+#locate{
+    padding:  1.8vw 5vw;
+}
+.locate .bx-call{
+    text-align: center;
+}
+
+.call-me{
+    width: 55vw;
+    padding-left: 22.5vw;
+    padding-top: 1vw;
+    padding-bottom: 5vw;
+    line-height: 1.4;
+    font-size: 1.14rem;
+    text-align: center;
+    color: white;
+}
+.hands{
+    background-image: url(../images/get\ in\ touch.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 5vw;
+    height: 25vw;
+}
+.overlay-blk{
+    background-color: #000000b6;
+    height: 30vw;
 }
 #form{
    margin-top: 12px;
     height: 150px;
     width: 350px; 
 }
-.contact p a{
+.call p a{
      display: inline-flex;
-    padding: 5px;
+    padding: 0.5vw;
     border: 2px solid #0e0b0c;
     border-radius: 50%;
-    font-size: 16px;
+    font-size: 1rem;
     color: #f0f1ef;
     background-color: #09091f;
-    margin: 0 8px;
     transition: 1s;
 }
-.contact p a:hover{
+.call p a:hover{
     background: #f4f7f5;
     color: #06066d;
     box-shadow: 0 0 40px #131d0e;
 }
+
 button{
     display: inline-block;
     width: 400px;
@@ -383,9 +448,10 @@ button{
     background: #2e7c4b;
     border: 2px solid #4ade80;
     border-radius: 40px;
-    box-shadow: 0 0 50px #211555;
+    box-shadow: inset 2px 2px 50px #211555,
+                inset -2px -2px 50px #00ff00;
     font-size: 16px;
-    color: black;
+    color: #fffdfd;
     font-weight: 600;
     transition: 1s;
 }
@@ -402,8 +468,10 @@ fieldset{
     padding: 15px;
     border: 2px solid #414441b7;
     border-radius: 40px;
-    height: 260px;
+    height: 25vw;
+    width: 30vw;
     box-shadow: 0 0 20px #040470;
+    background: linear-gradient(135deg,#00ff00,#170e66);
 }
 #skill{
     color: #f0f1ef;
@@ -416,36 +484,33 @@ fieldset{
     width: 360px;
     border-radius: 30px;
     height: 30px;
+    padding: 0.8vw;
     border: 2px solid black;
-    background-color: #33333315;
+    background-color: #fdfcfc;
 }
 textarea{
     border-radius: 15px;
     border: 2px solid black;
-    background-color: #33333315;
+    background-color: #fcf9f9fb;
 }
-.last{
-    background-image: url(../images/blur\ \(2\).jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
+
 :placeholder-shown{
     font-weight: 600;
     font-size: 18px;
 }
 footer{
     text-align: center;
-    font-size: 18px;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px#fcfdfc;
     font-weight: 700;
 }
 footer p{
     margin: 0;
-    color: #06066d;
+    color: #040430;
 }
 #more{
-    text-shadow: 0 0 6px #00ff00;
+    text-shadow: 2px 2px 6px #fdfffd;
+      padding-top: 10vw;
 }
 #more span{
     color: rgb(13, 12, 75);
